@@ -1,5 +1,6 @@
 package com.dodannie.blog;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *  @author  Dod_Annie
  * @date */
 @SpringBootApplication
+@MapperScan("com.dodannie.blog.mapper")
 public class BlogApplication {
 
     public static void main(String[] args) {
