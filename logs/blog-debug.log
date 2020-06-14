@@ -1,3 +1,23 @@
-2020-06-08 23:17:10.313 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
-2020-06-08 23:18:49.282 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
-2020-06-08 23:20:30.474 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-15 00:03:05.708 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-15 00:04:58.577 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-15 00:05:21.859 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-15 00:05:21.915 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 22(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-15 00:05:21.966 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-15 00:05:24.228 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-15 00:05:24.231 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 21(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-15 00:05:24.258 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-15 00:05:26.228 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-15 00:05:26.231 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/2(String), [2](String), 0(Integer), com.dodannie.blog.exception.BlogException: 发生了异常！
+	at com.dodannie.blog.controller.TestController.testException(TestController.java:23)
+	at com.dodannie.blog.controller.TestController$$FastClassBySpringCGLIB$$4cba5d1.invoke(<generated>)
+	at com.dodannie.blog.aspect.RequestAspect.doAround(RequestAspect.java:58)
+	at com.dodannie.blog.controller.TestController$$EnhancerBySpringCGLIB$$586d0b8c.testException(<generated>)
+(String), GET(String), 0(Long), null, 0:0:0:0:0:0:0:1(String)
+2020-06-15 00:05:26.259 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-15 00:05:37.676 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-15 00:05:37.681 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 12(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-15 00:05:37.715 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-15 00:05:38.955 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-15 00:05:38.958 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 15(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-15 00:05:38.986 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-15 01:03:01.016 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE

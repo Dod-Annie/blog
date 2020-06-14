@@ -34,7 +34,7 @@ public class RequestAspect {
     /**
      * 两个..代表所有子目录，最后括号里的两个..代表所有参数
      */
-    @Pointcut("execution( * com.jg.*.controller..*(..))")
+    @Pointcut("execution( * com.dodannie.*.controller..*(..))")
     public void logPointCut() {
     }
 
@@ -87,7 +87,7 @@ public class RequestAspect {
     public void saveExceptionLog(JoinPoint joinPoint, Throwable e) {
         Log logger = ThreadLocalContext.get().getLogger();
         logger.setLogStatus(StateEnums.REQUEST_ERROR.getCode());
-        String exception = StringUtils.getPackageException(e, "com.jg");
+        String exception = StringUtils.getPackageException(e, "com.dodannie");
         logger.setLogMessage(exception);
         logger.setLogTime(0L);
         logService.save(logger);
