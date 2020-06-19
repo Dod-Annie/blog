@@ -5,6 +5,7 @@ import com.dodannie.blog.enums.StateEnums;
 import com.dodannie.blog.pojo.Admin;
 import com.dodannie.blog.token.UsernamePasswordToken;
 import com.dodannie.blog.utils.Result;
+import com.dodannie.blog.utils.ShiroUtils;
 import com.dodannie.blog.utils.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -38,11 +39,25 @@ public class AdminController {
             subject.login(authenticationToken);
         } catch (Exception e) {
             e.printStackTrace();
-            return new Result<>(ResultEnum.PARAMS_NULL.getCode(), "用户名或密码错误！");
+            return new Result<>(ResultEnum.PARAMS_NULL.getCode(), "用户名或密码错误！！");
         }
         Serializable sessionId = subject.getSession().getId();
         Map<String, Object> returnMap = new HashMap<>(2);
         returnMap.put("token", sessionId);
         return new Result<>(returnMap);
     }
+
+
+    /**
+     * 获取当前登录用户信息
+     *
+     * @return
+     */
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    public Result<Admin> getLoginInfo() {
+        Admin loginAdmin = (Admin) ShiroUtils.getLoginUser();
+        loginAdmin.setPassword("");
+        return new Result<>(loginAdmin);
+    }
+
 }

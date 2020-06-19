@@ -1,33 +1,117 @@
-2020-06-15 00:03:05.518 INFO  [main]com.dodannie.blog.BlogApplication.logStarting:50 -Starting BlogApplication on LAPTOP-6I8G3U0P with PID 9716 (C:\Users\93616\gitlocal\blog\target\classes started by 93616 in C:\Users\93616\gitlocal\blog)
-2020-06-15 00:03:05.708 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
-2020-06-15 00:03:05.721 INFO  [main]com.dodannie.blog.BlogApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
-2020-06-15 00:03:09.789 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 -Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2020-06-15 00:03:10.362 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:185 -Finished Spring Data repository scanning in 554ms. Found 4 MongoDB repository interfaces.
-2020-06-15 00:03:13.071 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 1000 (http)
-2020-06-15 00:03:13.114 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-1000"]
-2020-06-15 00:03:13.147 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2020-06-15 00:03:13.149 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-06-15 00:03:13.747 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2020-06-15 00:03:13.748 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 7756 ms
-2020-06-15 00:03:14.151 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
-2020-06-15 00:03:16.703 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
-2020-06-15 00:03:19.504 INFO  [main]org.mongodb.driver.cluster.info:71 -Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2020-06-15 00:03:19.621 INFO  [cluster-ClusterId{value='5ee64a4714fbf325f4806627', description='null'}-localhost:27017]org.mongodb.driver.connection.info:71 -Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
-2020-06-15 00:03:19.631 INFO  [cluster-ClusterId{value='5ee64a4714fbf325f4806627', description='null'}-localhost:27017]org.mongodb.driver.cluster.info:71 -Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 11]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2974100}
-2020-06-15 00:03:19.841 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 00:03:19.854 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 00:03:20.008 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 00:03:20.010 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 00:03:26.840 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-15 00:03:27.480 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-1000"]
-2020-06-15 00:03:27.527 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 1000 (http) with context path ''
-2020-06-15 00:03:27.532 INFO  [main]com.dodannie.blog.BlogApplication.logStarted:59 -Started BlogApplication in 23.928 seconds (JVM running for 28.283)
-2020-06-15 00:03:45.964 INFO  [http-nio-1000-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-15 00:03:45.965 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2020-06-15 00:03:46.011 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 44 ms
-2020-06-15 00:03:49.292 ERROR [http-nio-1000-exec-2]com.dodannie.blog.advice.BlogExceptionAdvice.exceptionHandler:26 -统一异常处理：
-com.dodannie.blog.exception.BlogException: 发生了异常！
-	at com.dodannie.blog.controller.TestController.testException(TestController.java:23)
+2020-06-19 22:23:21.519 INFO  [main]com.dodannie.blog.BlogApplication.logStarting:50 -Starting BlogApplication on LAPTOP-6I8G3U0P with PID 13900 (C:\Users\93616\gitlocal\blog\target\classes started by 93616 in C:\Users\93616\gitlocal\blog)
+2020-06-19 22:23:21.590 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-19 22:23:21.673 INFO  [main]com.dodannie.blog.BlogApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2020-06-19 22:23:23.825 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 -Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-06-19 22:23:24.156 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:185 -Finished Spring Data repository scanning in 317ms. Found 4 MongoDB repository interfaces.
+2020-06-19 22:23:25.158 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'shiroConfig' of type [com.dodannie.blog.config.ShiroConfig$$EnhancerBySpringCGLIB$$75dbe794] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:25.260 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:25.285 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8944b309] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:25.296 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$701c574b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:25.303 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-06-19 22:23:25.475 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:25.508 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:25.555 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:27.605 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-06-19 22:23:27.607 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:27.759 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.413 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.427 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.447 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.457 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [com.sun.proxy.$Proxy82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.462 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminServiceImpl' of type [com.dodannie.blog.service.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.472 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.477 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userMapper' of type [com.sun.proxy.$Proxy83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.506 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#79e10fb4' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.510 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#79e10fb4' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.582 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#4cc8d70d' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.589 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#9d3d54e' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.595 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#9d3d54e' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.632 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.data.mongodb-org.springframework.boot.autoconfigure.mongo.MongoProperties' of type [org.springframework.boot.autoconfigure.mongo.MongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.648 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryDependentConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryDependentConfiguration$$EnhancerBySpringCGLIB$$9b1b945f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.660 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryConfiguration$$EnhancerBySpringCGLIB$$1d7b4caa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:28.715 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration' of type [org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration$$EnhancerBySpringCGLIB$$ae1d8337] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:30.565 INFO  [main]org.mongodb.driver.cluster.info:71 -Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-06-19 22:23:30.671 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongo' of type [com.mongodb.MongoClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:30.702 INFO  [cluster-ClusterId{value='5eecca62245657364c1718d3', description='null'}-localhost:27017]org.mongodb.driver.connection.info:71 -Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+2020-06-19 22:23:30.708 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoDbFactory' of type [org.springframework.data.mongodb.core.SimpleMongoDbFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:30.712 INFO  [cluster-ClusterId{value='5eecca62245657364c1718d3', description='null'}-localhost:27017]org.mongodb.driver.cluster.info:71 -Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 11]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2623100}
+2020-06-19 22:23:30.727 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration$$EnhancerBySpringCGLIB$$9e117468] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:30.901 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-06-19 22:23:30.908 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-06-19 22:23:30.913 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoCustomConversions' of type [org.springframework.data.mongodb.core.convert.MongoCustomConversions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.016 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoMappingContext' of type [org.springframework.data.mongodb.core.mapping.MongoMappingContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.056 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-06-19 22:23:31.059 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-06-19 22:23:31.094 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mappingMongoConverter' of type [org.springframework.data.mongodb.core.convert.MappingMongoConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.248 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoTemplate' of type [org.springframework.data.mongodb.core.MongoTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.672 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'commentDao' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.696 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'commentDao' of type [com.sun.proxy.$Proxy97] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.738 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#59f3426f' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.740 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#59f3426f' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.749 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#f810c18' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.751 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6cc8adff' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.753 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6cc8adff' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.771 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'collectionDao' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.773 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'collectionDao' of type [com.sun.proxy.$Proxy99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.806 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userServiceImpl' of type [com.dodannie.blog.service.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.814 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminRealm' of type [com.dodannie.blog.realm.AdminRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.883 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:31.997 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:23:32.591 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 1000 (http)
+2020-06-19 22:23:32.629 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-1000"]
+2020-06-19 22:23:32.650 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-06-19 22:23:32.651 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-19 22:23:32.983 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-06-19 22:23:32.984 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 11005 ms
+2020-06-19 22:23:35.469 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-1000"]
+2020-06-19 22:23:35.510 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 1000 (http) with context path ''
+2020-06-19 22:23:35.515 INFO  [main]com.dodannie.blog.BlogApplication.logStarted:59 -Started BlogApplication in 16.057 seconds (JVM running for 21.401)
+2020-06-19 22:23:48.568 INFO  [http-nio-1000-exec-2]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-19 22:23:48.569 INFO  [http-nio-1000-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2020-06-19 22:23:48.744 INFO  [http-nio-1000-exec-2]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 173 ms
+2020-06-19 22:23:49.170 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /admin/login
+2020-06-19 22:23:49.173 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : POST
+2020-06-19 22:23:49.183 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
+2020-06-19 22:23:49.190 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.AdminController.login
+2020-06-19 22:23:49.218 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[Admin(id=null, name=null, header=null, signature=null, comment=null, username=dodannie, password=123456)]
+2020-06-19 22:23:49.348 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.UserMapper.getByUsername.debug:159 -==>  Preparing: select user_id, username, password, sex, header, nickname, user_email, deleted from bl_user where username = ? 
+2020-06-19 22:23:49.489 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.UserMapper.getByUsername.debug:159 -==> Parameters: dodannie(String)
+2020-06-19 22:23:49.589 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.UserMapper.getByUsername.debug:159 -<==      Total: 0
+2020-06-19 22:23:49.606 WARN  [http-nio-1000-exec-2]org.apache.shiro.authc.AbstractAuthenticator.authenticate:216 -Authentication failed for token submission [com.dodannie.blog.token.UsernamePasswordToken - dodannie, rememberMe=false].  Possible unexpected error? (Typical or expected login exceptions should extend from AuthenticationException).
+com.dodannie.blog.exception.BlogException: 用户不存在！
+	at com.dodannie.blog.realm.AdminRealm.doGetAuthenticationInfo(AdminRealm.java:68)
+	at org.apache.shiro.realm.AuthenticatingRealm.getAuthenticationInfo(AuthenticatingRealm.java:568)
+	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doSingleRealmAuthentication(ModularRealmAuthenticator.java:180)
+	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doAuthenticate(ModularRealmAuthenticator.java:267)
+	at org.apache.shiro.authc.AbstractAuthenticator.authenticate(AbstractAuthenticator.java:198)
+	at org.apache.shiro.mgt.AuthenticatingSecurityManager.authenticate(AuthenticatingSecurityManager.java:106)
+	at org.apache.shiro.mgt.DefaultSecurityManager.login(DefaultSecurityManager.java:270)
+	at org.apache.shiro.subject.support.DelegatingSubject.login(DelegatingSubject.java:256)
+	at com.dodannie.blog.controller.AdminController.login(AdminController.java:39)
+	at com.dodannie.blog.controller.AdminController$$FastClassBySpringCGLIB$$b5ab7ca8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.dodannie.blog.aspect.RequestAspect.doAround(RequestAspect.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.dodannie.blog.controller.AdminController$$EnhancerBySpringCGLIB$$a4712c12.login(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -41,8 +125,8 @@ com.dodannie.blog.exception.BlogException: 发生了异常！
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
@@ -50,19 +134,21 @@ com.dodannie.blog.exception.BlogException: 发生了异常！
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
@@ -85,67 +171,379 @@ com.dodannie.blog.exception.BlogException: 发生了异常！
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-06-15 00:04:58.556 INFO  [main]com.dodannie.blog.BlogApplication.logStarting:50 -Starting BlogApplication on LAPTOP-6I8G3U0P with PID 16264 (C:\Users\93616\gitlocal\blog\target\classes started by 93616 in C:\Users\93616\gitlocal\blog)
-2020-06-15 00:04:58.577 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
-2020-06-15 00:04:58.581 INFO  [main]com.dodannie.blog.BlogApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
-2020-06-15 00:05:01.460 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 -Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2020-06-15 00:05:01.791 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:185 -Finished Spring Data repository scanning in 319ms. Found 4 MongoDB repository interfaces.
-2020-06-15 00:05:03.590 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 1000 (http)
-2020-06-15 00:05:03.621 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-1000"]
-2020-06-15 00:05:03.640 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2020-06-15 00:05:03.642 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-06-15 00:05:04.075 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2020-06-15 00:05:04.077 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 5360 ms
-2020-06-15 00:05:04.446 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
-2020-06-15 00:05:06.823 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
-2020-06-15 00:05:09.494 INFO  [main]org.mongodb.driver.cluster.info:71 -Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2020-06-15 00:05:09.651 INFO  [cluster-ClusterId{value='5ee64ab514fbf33f8837dd3b', description='null'}-localhost:27017]org.mongodb.driver.connection.info:71 -Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
-2020-06-15 00:05:09.664 INFO  [cluster-ClusterId{value='5ee64ab514fbf33f8837dd3b', description='null'}-localhost:27017]org.mongodb.driver.cluster.info:71 -Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 11]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2960100}
-2020-06-15 00:05:09.847 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 00:05:09.848 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 00:05:10.017 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 00:05:10.018 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 00:05:13.623 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-15 00:05:14.446 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-1000"]
-2020-06-15 00:05:14.511 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 1000 (http) with context path ''
-2020-06-15 00:05:14.519 INFO  [main]com.dodannie.blog.BlogApplication.logStarted:59 -Started BlogApplication in 18.268 seconds (JVM running for 23.053)
-2020-06-15 00:05:21.478 INFO  [http-nio-1000-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-15 00:05:21.480 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2020-06-15 00:05:21.518 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 36 ms
-2020-06-15 00:05:21.603 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /test/testException/1
-2020-06-15 00:05:21.604 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
-2020-06-15 00:05:21.607 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
-2020-06-15 00:05:21.612 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.TestController.testException
-2020-06-15 00:05:21.613 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[1]
-2020-06-15 00:05:21.624 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 22
-2020-06-15 00:05:21.802 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":20000,"msg":"操作成功"}
-2020-06-15 00:05:21.859 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-06-15 00:05:21.915 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 22(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
-2020-06-15 00:05:21.966 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
-2020-06-15 00:05:24.189 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /test/testException/1
-2020-06-15 00:05:24.192 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
-2020-06-15 00:05:24.194 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
-2020-06-15 00:05:24.201 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.TestController.testException
-2020-06-15 00:05:24.207 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[1]
-2020-06-15 00:05:24.210 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 21
-2020-06-15 00:05:24.211 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":20000,"msg":"操作成功"}
-2020-06-15 00:05:24.228 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-06-15 00:05:24.231 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 21(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
-2020-06-15 00:05:24.258 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
-2020-06-15 00:05:26.192 INFO  [http-nio-1000-exec-4]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /test/testException/2
-2020-06-15 00:05:26.194 INFO  [http-nio-1000-exec-4]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
-2020-06-15 00:05:26.196 INFO  [http-nio-1000-exec-4]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
-2020-06-15 00:05:26.197 INFO  [http-nio-1000-exec-4]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.TestController.testException
-2020-06-15 00:05:26.200 INFO  [http-nio-1000-exec-4]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[2]
-2020-06-15 00:05:26.228 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-06-15 00:05:26.231 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/2(String), [2](String), 0(Integer), com.dodannie.blog.exception.BlogException: 发生了异常！
+2020-06-19 22:23:49.633 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 463
+2020-06-19 22:23:49.984 INFO  [http-nio-1000-exec-2]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":40002,"msg":"用户名或密码错误！！"}
+2020-06-19 22:23:50.001 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-19 22:23:50.012 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /admin/login(String), [Admin(id=null, name=null, header=null, signature=null, comment=null, username=dodannie, password=123456)](String), 1(Integer), null, POST(String), 463(Long), {"code":40002,"msg":"用户名或密码错误！！"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-19 22:23:50.040 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-19 22:26:05.154 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /admin/login
+2020-06-19 22:26:05.156 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : POST
+2020-06-19 22:26:05.165 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
+2020-06-19 22:26:05.168 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.AdminController.login
+2020-06-19 22:26:05.175 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=123456)]
+2020-06-19 22:26:05.206 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.UserMapper.getByUsername.debug:159 -==>  Preparing: select user_id, username, password, sex, header, nickname, user_email, deleted from bl_user where username = ? 
+2020-06-19 22:26:05.207 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.UserMapper.getByUsername.debug:159 -==> Parameters: admin(String)
+2020-06-19 22:26:05.222 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.UserMapper.getByUsername.debug:159 -<==      Total: 0
+2020-06-19 22:26:05.224 WARN  [http-nio-1000-exec-5]org.apache.shiro.authc.AbstractAuthenticator.authenticate:216 -Authentication failed for token submission [com.dodannie.blog.token.UsernamePasswordToken - admin, rememberMe=false].  Possible unexpected error? (Typical or expected login exceptions should extend from AuthenticationException).
+com.dodannie.blog.exception.BlogException: 用户不存在！
+	at com.dodannie.blog.realm.AdminRealm.doGetAuthenticationInfo(AdminRealm.java:68)
+	at org.apache.shiro.realm.AuthenticatingRealm.getAuthenticationInfo(AuthenticatingRealm.java:568)
+	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doSingleRealmAuthentication(ModularRealmAuthenticator.java:180)
+	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doAuthenticate(ModularRealmAuthenticator.java:267)
+	at org.apache.shiro.authc.AbstractAuthenticator.authenticate(AbstractAuthenticator.java:198)
+	at org.apache.shiro.mgt.AuthenticatingSecurityManager.authenticate(AuthenticatingSecurityManager.java:106)
+	at org.apache.shiro.mgt.DefaultSecurityManager.login(DefaultSecurityManager.java:270)
+	at org.apache.shiro.subject.support.DelegatingSubject.login(DelegatingSubject.java:256)
+	at com.dodannie.blog.controller.AdminController.login(AdminController.java:39)
+	at com.dodannie.blog.controller.AdminController$$FastClassBySpringCGLIB$$b5ab7ca8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:752)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:56)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:88)
+	at com.dodannie.blog.aspect.RequestAspect.doAround(RequestAspect.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:644)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:633)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.dodannie.blog.controller.AdminController$$EnhancerBySpringCGLIB$$a4712c12.login(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:893)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-19 22:26:05.234 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 80
+2020-06-19 22:26:05.235 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":40002,"msg":"用户名或密码错误！！"}
+2020-06-19 22:26:05.252 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-19 22:26:05.255 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /admin/login(String), [Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=123456)](String), 1(Integer), null, POST(String), 80(Long), {"code":40002,"msg":"用户名或密码错误！！"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-19 22:26:05.286 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-19 22:33:09.577 INFO  [main]com.dodannie.blog.BlogApplication.logStarting:50 -Starting BlogApplication on LAPTOP-6I8G3U0P with PID 3656 (C:\Users\93616\gitlocal\blog\target\classes started by 93616 in C:\Users\93616\gitlocal\blog)
+2020-06-19 22:33:09.598 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-19 22:33:09.625 INFO  [main]com.dodannie.blog.BlogApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2020-06-19 22:33:11.948 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 -Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-06-19 22:33:12.271 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:185 -Finished Spring Data repository scanning in 310ms. Found 4 MongoDB repository interfaces.
+2020-06-19 22:33:13.149 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'shiroConfig' of type [com.dodannie.blog.config.ShiroConfig$$EnhancerBySpringCGLIB$$6bb65a89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:13.262 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:13.288 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$7f1f25fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:13.300 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$65f6ca40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:13.308 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-06-19 22:33:13.433 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:13.463 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:13.515 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:15.464 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-06-19 22:33:15.466 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:15.620 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.093 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.104 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.120 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.131 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [com.sun.proxy.$Proxy82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.134 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminServiceImpl' of type [com.dodannie.blog.service.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.143 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.146 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userMapper' of type [com.sun.proxy.$Proxy83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.170 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#45bbc52f' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.177 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#45bbc52f' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.255 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#72af90e8' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.261 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6f15f52a' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.266 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6f15f52a' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.287 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.data.mongodb-org.springframework.boot.autoconfigure.mongo.MongoProperties' of type [org.springframework.boot.autoconfigure.mongo.MongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.290 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryDependentConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryDependentConfiguration$$EnhancerBySpringCGLIB$$90f60754] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.295 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryConfiguration$$EnhancerBySpringCGLIB$$1355bf9f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:16.325 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration' of type [org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration$$EnhancerBySpringCGLIB$$a3f7f62c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:17.581 INFO  [main]org.mongodb.driver.cluster.info:71 -Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-06-19 22:33:17.648 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongo' of type [com.mongodb.MongoClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:17.678 INFO  [cluster-ClusterId{value='5eecccad2456570e48e7d6d3', description='null'}-localhost:27017]org.mongodb.driver.connection.info:71 -Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+2020-06-19 22:33:17.686 INFO  [cluster-ClusterId{value='5eecccad2456570e48e7d6d3', description='null'}-localhost:27017]org.mongodb.driver.cluster.info:71 -Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 11]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=1648800}
+2020-06-19 22:33:17.688 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoDbFactory' of type [org.springframework.data.mongodb.core.SimpleMongoDbFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:17.704 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration$$EnhancerBySpringCGLIB$$93ebe75d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:17.828 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-06-19 22:33:17.830 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-06-19 22:33:17.834 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoCustomConversions' of type [org.springframework.data.mongodb.core.convert.MongoCustomConversions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:17.954 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoMappingContext' of type [org.springframework.data.mongodb.core.mapping.MongoMappingContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:17.992 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-06-19 22:33:17.995 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-06-19 22:33:18.035 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mappingMongoConverter' of type [org.springframework.data.mongodb.core.convert.MappingMongoConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.196 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoTemplate' of type [org.springframework.data.mongodb.core.MongoTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.613 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'commentDao' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.632 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'commentDao' of type [com.sun.proxy.$Proxy97] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.672 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6d3ad37a' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.674 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6d3ad37a' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.684 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#11cadb32' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.685 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#704c3bdf' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.687 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#704c3bdf' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.705 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'collectionDao' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.707 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'collectionDao' of type [com.sun.proxy.$Proxy99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.738 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userServiceImpl' of type [com.dodannie.blog.service.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.742 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminRealm' of type [com.dodannie.blog.realm.AdminRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.802 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:18.859 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-19 22:33:19.455 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 1000 (http)
+2020-06-19 22:33:19.484 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-1000"]
+2020-06-19 22:33:19.504 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-06-19 22:33:19.504 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-19 22:33:19.800 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-06-19 22:33:19.801 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 9926 ms
+2020-06-19 22:33:22.551 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-1000"]
+2020-06-19 22:33:22.674 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 1000 (http) with context path ''
+2020-06-19 22:33:22.679 INFO  [main]com.dodannie.blog.BlogApplication.logStarted:59 -Started BlogApplication in 14.837 seconds (JVM running for 17.941)
+2020-06-19 22:33:25.264 INFO  [http-nio-1000-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-19 22:33:25.266 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2020-06-19 22:33:25.365 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 88 ms
+2020-06-19 22:33:25.974 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /admin/login
+2020-06-19 22:33:25.979 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : POST
+2020-06-19 22:33:26.008 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
+2020-06-19 22:33:26.039 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.AdminController.login
+2020-06-19 22:33:26.049 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=123456)]
+2020-06-19 22:33:26.197 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -==>  Preparing: select name, header, signature, username, password from bl_admin where username = ? 
+2020-06-19 22:33:26.327 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -==> Parameters: admin(String)
+2020-06-19 22:33:26.559 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -<==      Total: 1
+2020-06-19 22:33:28.525 WARN  [http-nio-1000-exec-1]org.apache.catalina.util.SessionIdGeneratorBase.log:173 -Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [1,914] milliseconds.
+2020-06-19 22:33:28.539 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 2565
+2020-06-19 22:33:28.820 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":20000,"data":{"token":"BF8DAAA59505ACF508C0A087F805CF00"},"msg":"操作成功"}
+2020-06-19 22:33:28.857 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-19 22:33:28.867 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /admin/login(String), [Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=123456)](String), 1(Integer), null, POST(String), 2565(Long), {"code":20000,"data":{"token":"BF8DAAA59505ACF508C0A087F805CF00"},"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-19 22:33:28.943 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-19 22:34:03.178 WARN  [http-nio-1000-exec-3]org.springframework.web.servlet.PageNotFound.noHandlerFound:1250 -No mapping for POST /test/1
+2020-06-19 22:34:03.224 ERROR [http-nio-1000-exec-3]o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet].log:175 -Servlet.service() for servlet [dispatcherServlet] threw exception
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.dodannie.blog.utils.ShiroUtils.getLoginUser(ShiroUtils.java:28)
+	at com.dodannie.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:61)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:137)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-19 22:34:03.233 ERROR [http-nio-1000-exec-3]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].log:175 -Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.dodannie.blog.utils.ShiroUtils.getLoginUser(ShiroUtils.java:28)
+	at com.dodannie.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:61)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:137)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 25 common frames omitted
+2020-06-19 22:34:26.170 WARN  [http-nio-1000-exec-4]o.s.w.s.mvc.support.DefaultHandlerExceptionResolver.logException:199 -Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-06-19 22:34:26.185 ERROR [http-nio-1000-exec-4]o.a.c.c.C.[Tomcat].[localhost].[/].[dispatcherServlet].log:175 -Servlet.service() for servlet [dispatcherServlet] threw exception
+org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.dodannie.blog.utils.ShiroUtils.getLoginUser(ShiroUtils.java:28)
+	at com.dodannie.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:61)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:137)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-19 22:34:26.191 ERROR [http-nio-1000-exec-4]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].log:175 -Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.shiro.UnavailableSecurityManagerException: No SecurityManager accessible to the calling code, either bound to the org.apache.shiro.util.ThreadContext or as a vm static singleton.  This is an invalid application configuration.
+	at org.apache.shiro.SecurityUtils.getSecurityManager(SecurityUtils.java:123)
+	at org.apache.shiro.subject.Subject$Builder.<init>(Subject.java:627)
+	at org.apache.shiro.SecurityUtils.getSubject(SecurityUtils.java:56)
+	at com.dodannie.blog.utils.ShiroUtils.getLoginUser(ShiroUtils.java:28)
+	at com.dodannie.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:61)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:137)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 25 common frames omitted
+2020-06-19 22:34:39.115 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /test/testException/1
+2020-06-19 22:34:39.117 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
+2020-06-19 22:34:39.118 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
+2020-06-19 22:34:39.121 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.TestController.testException
+2020-06-19 22:34:39.122 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[1]
+2020-06-19 22:34:39.138 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 22
+2020-06-19 22:34:39.139 INFO  [http-nio-1000-exec-5]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":20000,"msg":"操作成功"}
+2020-06-19 22:34:39.165 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-19 22:34:39.167 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 22(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-19 22:34:39.199 DEBUG [http-nio-1000-exec-5]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-19 22:34:45.048 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /test/testException/2
+2020-06-19 22:34:45.050 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
+2020-06-19 22:34:45.052 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
+2020-06-19 22:34:45.053 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.TestController.testException
+2020-06-19 22:34:45.065 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[2]
+2020-06-19 22:34:45.100 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-19 22:34:45.103 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/2(String), [2](String), 0(Integer), com.dodannie.blog.exception.BlogException: 发生了异常！
 	at com.dodannie.blog.controller.TestController.testException(TestController.java:23)
 	at com.dodannie.blog.controller.TestController$$FastClassBySpringCGLIB$$4cba5d1.invoke(<generated>)
 	at com.dodannie.blog.aspect.RequestAspect.doAround(RequestAspect.java:58)
-	at com.dodannie.blog.controller.TestController$$EnhancerBySpringCGLIB$$586d0b8c.testException(<generated>)
+	at com.dodannie.blog.controller.TestController$$EnhancerBySpringCGLIB$$8e111fd7.testException(<generated>)
 (String), GET(String), 0(Long), null, 0:0:0:0:0:0:0:1(String)
-2020-06-15 00:05:26.259 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
-2020-06-15 00:05:26.267 ERROR [http-nio-1000-exec-4]com.dodannie.blog.advice.BlogExceptionAdvice.exceptionHandler:26 -统一异常处理：
+2020-06-19 22:34:45.136 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-19 22:34:45.139 ERROR [http-nio-1000-exec-6]com.dodannie.blog.advice.BlogExceptionAdvice.exceptionHandler:26 -统一异常处理：
 com.dodannie.blog.exception.BlogException: 发生了异常！
 	at com.dodannie.blog.controller.TestController.testException(TestController.java:23)
 	at com.dodannie.blog.controller.TestController$$FastClassBySpringCGLIB$$4cba5d1.invoke(<generated>)
@@ -171,7 +569,7 @@ com.dodannie.blog.exception.BlogException: 发生了异常！
 	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
-	at com.dodannie.blog.controller.TestController$$EnhancerBySpringCGLIB$$586d0b8c.testException(<generated>)
+	at com.dodannie.blog.controller.TestController$$EnhancerBySpringCGLIB$$8e111fd7.testException(<generated>)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -194,19 +592,21 @@ com.dodannie.blog.exception.BlogException: 发生了异常！
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:94)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
@@ -229,95 +629,129 @@ com.dodannie.blog.exception.BlogException: 发生了异常！
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-2020-06-15 00:05:37.642 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /test/testException/1
-2020-06-15 00:05:37.644 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
-2020-06-15 00:05:37.645 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
-2020-06-15 00:05:37.648 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.TestController.testException
-2020-06-15 00:05:37.651 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[1]
-2020-06-15 00:05:37.653 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 12
-2020-06-15 00:05:37.655 INFO  [http-nio-1000-exec-6]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":20000,"msg":"操作成功"}
-2020-06-15 00:05:37.676 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-06-15 00:05:37.681 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 12(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
-2020-06-15 00:05:37.715 DEBUG [http-nio-1000-exec-6]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
-2020-06-15 00:05:38.913 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /test/testException/1
-2020-06-15 00:05:38.916 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
-2020-06-15 00:05:38.922 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
-2020-06-15 00:05:38.924 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.TestController.testException
-2020-06-15 00:05:38.927 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[1]
-2020-06-15 00:05:38.928 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 15
-2020-06-15 00:05:38.930 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":20000,"msg":"操作成功"}
-2020-06-15 00:05:38.955 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
-2020-06-15 00:05:38.958 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 15(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
-2020-06-15 00:05:38.986 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
-2020-06-15 01:03:01.008 INFO  [main]com.dodannie.blog.BlogApplication.logStarting:50 -Starting BlogApplication on LAPTOP-6I8G3U0P with PID 13108 (C:\Users\93616\gitlocal\blog\target\classes started by 93616 in C:\Users\93616\gitlocal\blog)
-2020-06-15 01:03:01.016 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
-2020-06-15 01:03:01.017 INFO  [main]com.dodannie.blog.BlogApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
-2020-06-15 01:03:06.302 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 -Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2020-06-15 01:03:07.023 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:185 -Finished Spring Data repository scanning in 702ms. Found 4 MongoDB repository interfaces.
-2020-06-15 01:03:08.406 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'shiroConfig' of type [com.dodannie.blog.config.ShiroConfig$$EnhancerBySpringCGLIB$$2f7a955a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:08.778 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:08.837 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$42e360cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:08.856 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure$$EnhancerBySpringCGLIB$$29bb0511] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:08.868 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
-2020-06-15 01:03:09.225 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:09.275 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidFilterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:09.395 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'statFilter' of type [com.alibaba.druid.filter.stat.StatFilter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:12.543 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
-2020-06-15 01:03:12.545 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'dataSource' of type [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:12.861 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:13.944 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:13.967 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.015 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.033 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminMapper' of type [com.sun.proxy.$Proxy82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.044 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminServiceImpl' of type [com.dodannie.blog.service.impl.AdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.061 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.067 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userMapper' of type [com.sun.proxy.$Proxy83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.117 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#3a3883c4' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.141 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#3a3883c4' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.313 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#70f148dc' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.322 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6568f998' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.339 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6568f998' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.395 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'spring.data.mongodb-org.springframework.boot.autoconfigure.mongo.MongoProperties' of type [org.springframework.boot.autoconfigure.mongo.MongoProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.399 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryDependentConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryDependentConfiguration$$EnhancerBySpringCGLIB$$54ba4225] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.413 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDbFactoryConfiguration$$EnhancerBySpringCGLIB$$d719fa70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:14.446 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration' of type [org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration$$EnhancerBySpringCGLIB$$67bc30fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:15.949 INFO  [main]org.mongodb.driver.cluster.info:71 -Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-2020-06-15 01:03:16.038 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongo' of type [com.mongodb.MongoClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:16.064 INFO  [cluster-ClusterId{value='5ee6585314fbf33334a476f5', description='null'}-localhost:27017]org.mongodb.driver.connection.info:71 -Opened connection [connectionId{localValue:1, serverValue:3}] to localhost:27017
-2020-06-15 01:03:16.075 INFO  [cluster-ClusterId{value='5ee6585314fbf33334a476f5', description='null'}-localhost:27017]org.mongodb.driver.cluster.info:71 -Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 11]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=4063800}
-2020-06-15 01:03:16.078 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoDbFactory' of type [org.springframework.data.mongodb.core.SimpleMongoDbFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:16.099 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration' of type [org.springframework.boot.autoconfigure.data.mongo.MongoDataConfiguration$$EnhancerBySpringCGLIB$$57b0222e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:16.295 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 01:03:16.297 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 01:03:16.299 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoCustomConversions' of type [org.springframework.data.mongodb.core.convert.MongoCustomConversions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:16.411 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoMappingContext' of type [org.springframework.data.mongodb.core.mapping.MongoMappingContext] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:16.449 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.LocalDateTime to class java.time.Instant as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 01:03:16.450 WARN  [main]org.springframework.data.convert.CustomConversions.register:207 -Registering converter from class java.time.Instant to class java.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
-2020-06-15 01:03:16.489 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mappingMongoConverter' of type [org.springframework.data.mongodb.core.convert.MappingMongoConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:16.648 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'mongoTemplate' of type [org.springframework.data.mongodb.core.MongoTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.147 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'commentDao' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.166 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'commentDao' of type [com.sun.proxy.$Proxy97] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.214 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#503a7990' of type [org.springframework.beans.factory.config.PropertiesFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.216 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#503a7990' of type [java.util.Properties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.228 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#2e4ecdf8' of type [org.springframework.data.repository.core.support.PropertiesBasedNamedQueries] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.230 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6dcbbb49' of type [org.springframework.data.repository.core.support.RepositoryFragmentsFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.232 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean '(inner bean)#6dcbbb49' of type [org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.253 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'collectionDao' of type [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.257 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'collectionDao' of type [com.sun.proxy.$Proxy99] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.292 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'userServiceImpl' of type [com.dodannie.blog.service.impl.UserServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.298 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'adminRealm' of type [com.dodannie.blog.realm.AdminRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.366 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:17.434 INFO  [main]o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:330 -Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-06-15 01:03:18.099 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 1000 (http)
-2020-06-15 01:03:18.132 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-1000"]
-2020-06-15 01:03:18.151 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
-2020-06-15 01:03:18.152 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-06-15 01:03:18.461 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
-2020-06-15 01:03:18.463 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 17201 ms
-2020-06-15 01:03:21.754 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-1000"]
-2020-06-15 01:03:21.808 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 1000 (http) with context path ''
-2020-06-15 01:03:21.819 INFO  [main]com.dodannie.blog.BlogApplication.logStarted:59 -Started BlogApplication in 23.303 seconds (JVM running for 29.707)
-2020-06-15 01:03:28.162 INFO  [http-nio-1000-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-15 01:03:28.164 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
-2020-06-15 01:03:28.207 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 42 ms
-2020-06-15 01:03:28.972 WARN  [http-nio-1000-exec-1]org.apache.catalina.util.SessionIdGeneratorBase.log:173 -Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [717] milliseconds.
+2020-06-19 22:34:49.855 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /test/testException/1
+2020-06-19 22:34:49.861 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
+2020-06-19 22:34:49.867 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
+2020-06-19 22:34:49.873 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.TestController.testException
+2020-06-19 22:34:49.880 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[1]
+2020-06-19 22:34:49.883 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 28
+2020-06-19 22:34:49.887 INFO  [http-nio-1000-exec-7]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":20000,"msg":"操作成功"}
+2020-06-19 22:34:49.937 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-19 22:34:49.940 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /test/testException/1(String), [1](String), 1(Integer), null, GET(String), 28(Long), {"code":20000,"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-19 22:34:49.981 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-19 22:34:53.195 ERROR [http-nio-1000-exec-8]com.dodannie.blog.advice.BlogExceptionAdvice.exceptionHandler:26 -统一异常处理：
+com.dodannie.blog.exception.BlogException: 当前账号未登录
+	at com.dodannie.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:67)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:137)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-19 22:35:54.367 ERROR [http-nio-1000-exec-10]com.dodannie.blog.advice.BlogExceptionAdvice.exceptionHandler:26 -统一异常处理：
+com.dodannie.blog.exception.BlogException: 当前账号未登录
+	at com.dodannie.blog.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:67)
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:137)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1035)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-06-19 22:35:57.243 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:105 -请求地址 : /admin/info
+2020-06-19 22:35:57.245 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:106 -请求方式 : GET
+2020-06-19 22:35:57.247 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:109 -IP : 0:0:0:0:0:0:0:1
+2020-06-19 22:35:57.249 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:111 -方法 : com.dodannie.blog.controller.AdminController.getLoginInfo
+2020-06-19 22:35:57.251 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.printRequestLog:113 -请求参数：[]
+2020-06-19 22:35:57.253 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.doAround:60 -耗时 : 9
+2020-06-19 22:35:57.266 INFO  [http-nio-1000-exec-1]com.dodannie.blog.aspect.RequestAspect.doAfterReturning:74 -返回值：{"code":20000,"data":{"name":"dodannie","password":"","username":"admin"},"msg":"操作成功"}
+2020-06-19 22:35:57.287 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-19 22:35:57.290 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /admin/info(String), [](String), 1(Integer), null, GET(String), 9(Long), {"code":20000,"data":{"name":"dodannie","password":"","username":"admin"},"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-19 22:35:57.322 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1

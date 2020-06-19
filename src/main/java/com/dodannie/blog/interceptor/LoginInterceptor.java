@@ -4,10 +4,16 @@ import com.dodannie.blog.enums.ResultEnum;
 import com.dodannie.blog.exception.BlogException;
 import com.dodannie.blog.utils.ShiroUtils;
 import com.dodannie.blog.utils.StringUtils;
+import org.apache.tomcat.util.buf.MessageBytes;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @Author: 杨德石
@@ -37,7 +43,15 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        if (containsWhiteList(request.getRequestURI())) {
+        Object a = findCoyoteRequest(request);
+        Field coyoteRequest = a.getClass().getDeclaredField("coyoteRequest");
+        coyoteRequest.setAccessible(true);
+        Object b = coyoteRequest.get(a);
+
+        Field uriMB = b.getClass().getDeclaredField("uriMB");
+        uriMB.setAccessible(true);
+        MessageBytes c = (MessageBytes)uriMB.get(b);
+        if (containsWhiteList(c.getString())) {
             return true;
         }
         // 获取token
@@ -68,4 +82,39 @@ public class LoginInterceptor implements HandlerInterceptor {
         return false;
     }
 
+    private Class getClassByName(Class classObject, String name){
+        Map<Class, List<Field>> fieldMap = new HashMap<>();
+        Class returnClass = null;
+        Class tempClass = classObject;
+        while (tempClass != null) {
+            fieldMap.put(tempClass, Arrays.asList(tempClass .getDeclaredFields()));
+            tempClass = tempClass.getSuperclass();
+        }
+
+        for(Map.Entry<Class,List<Field>> entry: fieldMap.entrySet()){
+            for (Field f : entry.getValue()) {
+                if(f.getName().equals(name)){
+                    returnClass = entry.getKey();
+                    break;
+                }
+            }
+        }
+        return returnClass;
+    }
+
+    private Object findCoyoteRequest(Object request)  throws Exception {
+        Class a = getClassByName(request.getClass(), "request");
+        Field request1 = a.getDeclaredField("request");
+        request1.setAccessible(true);
+        Object b = request1.get(request);
+        if (getClassByName(b.getClass(), "coyoteRequest") == null) {
+            return findCoyoteRequest(b);
+        } else {
+            return b;
+        }
+    }
+
 }
+
+
+
