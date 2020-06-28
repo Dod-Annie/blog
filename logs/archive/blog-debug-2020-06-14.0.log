@@ -1,0 +1,3 @@
+2020-06-08 23:17:10.313 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-08 23:18:49.282 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-08 23:20:30.474 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE

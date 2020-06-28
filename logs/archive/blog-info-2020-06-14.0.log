@@ -1,0 +1,54 @@
+2020-06-08 23:17:10.306 INFO  [main]com.dodannie.blog.BlogApplication.logStarting:50 -Starting BlogApplication on LAPTOP-6I8G3U0P with PID 2224 (C:\Users\93616\gitlocal\blog\target\classes started by 93616 in C:\Users\93616\gitlocal\blog)
+2020-06-08 23:17:10.315 INFO  [main]com.dodannie.blog.BlogApplication.logStartupProfileInfo:652 -The following profiles are active: dev
+2020-06-08 23:17:14.254 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 -Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-06-08 23:17:14.694 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:185 -Finished Spring Data repository scanning in 420ms. Found 4 MongoDB repository interfaces.
+2020-06-08 23:17:17.868 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 1000 (http)
+2020-06-08 23:17:17.926 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-1000"]
+2020-06-08 23:17:17.961 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-06-08 23:17:17.969 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-08 23:17:18.492 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-06-08 23:17:18.493 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 7758 ms
+2020-06-08 23:17:18.826 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-06-08 23:17:21.061 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-06-08 23:17:21.082 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-06-08 23:17:21.124 INFO  [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:136 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-08 23:18:49.265 INFO  [main]com.dodannie.blog.BlogApplication.logStarting:50 -Starting BlogApplication on LAPTOP-6I8G3U0P with PID 15792 (C:\Users\93616\gitlocal\blog\target\classes started by 93616 in C:\Users\93616\gitlocal\blog)
+2020-06-08 23:18:49.282 INFO  [main]com.dodannie.blog.BlogApplication.logStartupProfileInfo:652 -The following profiles are active: dev
+2020-06-08 23:18:52.733 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 -Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-06-08 23:18:53.133 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:185 -Finished Spring Data repository scanning in 385ms. Found 4 MongoDB repository interfaces.
+2020-06-08 23:18:55.203 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 1000 (http)
+2020-06-08 23:18:55.238 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-1000"]
+2020-06-08 23:18:55.270 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-06-08 23:18:55.271 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-08 23:18:55.685 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-06-08 23:18:55.685 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 6179 ms
+2020-06-08 23:18:55.995 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-06-08 23:18:57.666 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-06-08 23:18:57.712 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Stopping service [Tomcat]
+2020-06-08 23:18:57.760 INFO  [main]o.s.b.a.logging.ConditionEvaluationReportLoggingListener.logMessage:136 -
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-06-08 23:20:30.463 INFO  [main]com.dodannie.blog.BlogApplication.logStarting:50 -Starting BlogApplication on LAPTOP-6I8G3U0P with PID 7804 (C:\Users\93616\gitlocal\blog\target\classes started by 93616 in C:\Users\93616\gitlocal\blog)
+2020-06-08 23:20:30.477 INFO  [main]com.dodannie.blog.BlogApplication.logStartupProfileInfo:648 -No active profile set, falling back to default profiles: default
+2020-06-08 23:20:33.568 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:127 -Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-06-08 23:20:33.963 INFO  [main]o.s.d.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn:185 -Finished Spring Data repository scanning in 381ms. Found 4 MongoDB repository interfaces.
+2020-06-08 23:20:36.214 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.initialize:90 -Tomcat initialized with port(s): 1000 (http)
+2020-06-08 23:20:36.257 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Initializing ProtocolHandler ["http-nio-1000"]
+2020-06-08 23:20:36.291 INFO  [main]org.apache.catalina.core.StandardService.log:173 -Starting service [Tomcat]
+2020-06-08 23:20:36.297 INFO  [main]org.apache.catalina.core.StandardEngine.log:173 -Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-08 23:20:36.853 INFO  [main]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring embedded WebApplicationContext
+2020-06-08 23:20:36.854 INFO  [main]org.springframework.web.context.ContextLoader.prepareWebApplicationContext:284 -Root WebApplicationContext: initialization completed in 6081 ms
+2020-06-08 23:20:37.205 INFO  [main]c.a.d.s.boot.autoconfigure.DruidDataSourceAutoConfigure.dataSource:56 -Init DruidDataSource
+2020-06-08 23:20:39.795 INFO  [main]com.alibaba.druid.pool.DruidDataSource.init:930 -{dataSource-1} inited
+2020-06-08 23:20:42.592 INFO  [main]org.mongodb.driver.cluster.info:71 -Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2020-06-08 23:20:42.750 INFO  [cluster-ClusterId{value='5ede574a497f471e7cee351d', description='null'}-localhost:27017]org.mongodb.driver.connection.info:71 -Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:27017
+2020-06-08 23:20:42.763 INFO  [cluster-ClusterId{value='5ede574a497f471e7cee351d', description='null'}-localhost:27017]org.mongodb.driver.cluster.info:71 -Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 11]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=2553600}
+2020-06-08 23:20:46.765 INFO  [main]o.s.scheduling.concurrent.ThreadPoolTaskExecutor.initialize:171 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-08 23:20:47.629 INFO  [main]org.apache.coyote.http11.Http11NioProtocol.log:173 -Starting ProtocolHandler ["http-nio-1000"]
+2020-06-08 23:20:47.696 INFO  [main]o.s.boot.web.embedded.tomcat.TomcatWebServer.start:202 -Tomcat started on port(s): 1000 (http) with context path ''
+2020-06-08 23:20:47.700 INFO  [main]com.dodannie.blog.BlogApplication.logStarted:59 -Started BlogApplication in 19.319 seconds (JVM running for 24.15)
+2020-06-08 23:22:52.301 INFO  [http-nio-1000-exec-1]o.a.catalina.core.ContainerBase.[Tomcat].[localhost].[/].log:173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-08 23:22:52.303 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:525 -Initializing Servlet 'dispatcherServlet'
+2020-06-08 23:22:52.346 INFO  [http-nio-1000-exec-1]org.springframework.web.servlet.DispatcherServlet.initServletBean:547 -Completed initialization in 40 ms

@@ -42,7 +42,7 @@
         select
         log_id, log_url, log_params, log_status, log_message,
         log_method, log_time, log_result, log_ip, created_time
-        from bl_log
+        from bl_logs
         <where>
             <if test="params.logUrl!=null and params.logUrl!=''">
                 and log_url = #{params.logUrl}
