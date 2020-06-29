@@ -18,3 +18,15 @@ spring:
       testOnReturn: false
       timeBetweenEvictionRunsMillis: 60000
       minEvictableIdleTimeMillis: 300000
+  tengxun:
+    accessKey: AKIDREoGXYaHuPima7gEuQx3uiGgkbqpNKhw
+    secretKey: 8XheMUM1PYpqxtISN3UuEI4ey04xf9Ob
+    bucket: ap-nanjing
+    bucketName: dodannie-1300549060
+    path: https://dodannie-1300549060.cos.ap-nanjing.myqcloud.com
+    qianzui: blog
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 200MB
