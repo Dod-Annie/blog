@@ -34,6 +34,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             "/about/read",
             "/type/getList",
             "/blog/recomRead",
+            "/blog/getTop",
             "/blog/read",
             "/blog/getTimeLine",
             "/blog/getByPage",

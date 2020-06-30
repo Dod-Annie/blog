@@ -140,7 +140,7 @@
     </select>
     <select id="getTop" resultMap="VoResultMap">
         select
-        blog_id, blog_title, blog_goods,
+        blog_id, blog_title, blog_goods,blog_image,
         blog_read, blog_collection, blog_comment,
         created_time
         from bl_blog as b
