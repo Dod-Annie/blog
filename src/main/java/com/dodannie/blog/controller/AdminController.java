@@ -1,6 +1,7 @@
 package com.dodannie.blog.controller;
 
 import com.dodannie.blog.enums.ResultEnum;
+import com.dodannie.blog.enums.StateEnums;
 import com.dodannie.blog.pojo.Admin;
 import com.dodannie.blog.service.AdminService;
 import com.dodannie.blog.token.UsernamePasswordToken;
@@ -39,7 +40,7 @@ public class AdminController {
             return new Result<>(ResultEnum.PARAMS_NULL.getCode(), "用户名或密码错误！");
         }
         Subject subject = SecurityUtils.getSubject();
-        AuthenticationToken authenticationToken = new UsernamePasswordToken(admin.getUsername(), admin.getPassword());
+        AuthenticationToken authenticationToken = new UsernamePasswordToken(admin.getUsername(), admin.getPassword(), StateEnums.ADMIN.getCode());
         try {
             subject.login(authenticationToken);
         } catch (Exception e) {

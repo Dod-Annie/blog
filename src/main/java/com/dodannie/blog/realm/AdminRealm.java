@@ -55,19 +55,19 @@ public class AdminRealm extends AuthorizingRealm {
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken) token;
         String username = usernamePasswordToken.getUsername();
         int state = usernamePasswordToken.getState();
-//        if (state == StateEnums.ADMIN.getCode()) {
+        if (state == StateEnums.ADMIN.getCode()) {
             Admin admin = adminService.getByUsername(username);
              if (admin == null) {
                 // 用户不存在
                 throw new BlogException(ResultEnum.ERROR.getCode(), "用户不存在！");
             }
             return new SimpleAuthenticationInfo(admin, admin.getPassword(), this.getName());
-//        } else {
-//            User user = userService.getByUsername(username);
-//            if (user == null || user.getDeleted() == 1) {
-//                throw new BlogException(ResultEnum.ERROR.getCode(), "用户不存在！");
-//            }
-//            return new SimpleAuthenticationInfo(user, user.getPassword(), this.getName());
-//        }
+        } else {
+            User user = userService.getByUsername(username);
+            if (user == null || user.getDeleted() == 1) {
+                throw new BlogException(ResultEnum.ERROR.getCode(), "用户不存在！");
+            }
+            return new SimpleAuthenticationInfo(user, user.getPassword(), this.getName());
+        }
     }
 }
