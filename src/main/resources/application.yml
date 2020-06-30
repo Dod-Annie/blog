@@ -1,5 +1,7 @@
 server:
   port: 1000
+  servlet:
+    context-path: /prod-api
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.dodannie
