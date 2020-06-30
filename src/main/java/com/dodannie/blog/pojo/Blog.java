@@ -94,4 +94,9 @@ public class Blog implements Serializable {
      */
     private Integer deleted;
 
+    /**
+     * 是否置顶封面图，0否1是
+     */
+    private Integer recommend;
+
 }

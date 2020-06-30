@@ -158,6 +158,18 @@ public class BlogController {
         return new Result<>(blogList);
     }
 
+
+    /**
+     * 分页查询
+     *
+     * @return
+     */
+    @RequestMapping(value = "/getTop", method = RequestMethod.GET)
+    public Result<List<BlogVo>> getTop() {
+        List<BlogVo> blogList = blogService.getTop();
+        return new Result<>(blogList);
+    }
+
     /**
      * 点赞
      *

@@ -138,6 +138,14 @@
             and type_id = #{params.typeId}
         </if>
     </select>
+    <select id="getTop" resultMap="VoResultMap">
+        select
+        blog_id, blog_title, blog_goods,
+        blog_read, blog_collection, blog_comment,
+        created_time
+        from bl_blog as b
+        where b.recommend = 1 and b.deleted = 0
+    </select>
     <select id="recomRead" resultMap="VoResultMap">
         select
         blog_id, blog_title, blog_goods,

@@ -1350,3 +1350,60 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'enabled' in 'where 
 2020-06-30 16:22:07.594 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
 2020-06-30 16:22:07.597 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
 2020-06-30 16:22:07.616 DEBUG [http-nio-1000-exec-1]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-30 22:23:40.158 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-30 22:24:28.566 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -==>  Preparing: select name, header, signature, username, password from bl_admin where username = ? 
+2020-06-30 22:24:28.661 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -==> Parameters: admin(String)
+2020-06-30 22:24:28.726 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -<==      Total: 1
+2020-06-30 22:24:29.552 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-30 22:24:29.559 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /admin/login(String), [Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=e10adc3949ba59abbe56e057f20f883e)](String), 1(Integer), null, POST(String), 989(Long), {"code":20000,"data":{"token":"FF863980D4D1F261A0F1A5E2280FC718"},"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-30 22:24:29.592 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-30 22:25:04.822 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.BlogMapper.recomRead.debug:159 -==>  Preparing: select blog_id, blog_title, blog_goods, blog_read, blog_collection, blog_comment, created_time,type_name from bl_blog as b inner join bl_type as t on type_id = blog_type where t.deleted = 0 and b.deleted = 0 order by (blog_read + blog_goods) desc limit 5 
+2020-06-30 22:25:04.824 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.BlogMapper.recomRead.debug:159 -==> Parameters: 
+2020-06-30 22:25:04.848 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.BlogMapper.recomRead.debug:159 -<==      Total: 3
+2020-06-30 22:25:04.886 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-30 22:25:04.889 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /blog/recomRead(String), [](String), 1(Integer), null, GET(String), 91(Long), {"code":20000,"data":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1277960008499290112","blogRead":6,"blogTitle":"JavaScript在浏览器中的事件循环机制","createdTime":"2020-06-30 21:39:44","typeName":"Javascript"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1277133222783172608","blogRead":1,"blogTitle":"测试博客1","createdTime":"2020-06-28 14:54:24","typeName":"Javascript"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1277133260989087744","blogRead":0,"blogTitle":"测试博客2","createdTime":"2020-06-28 14:54:33","typeName":"Go"}],"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-30 22:25:04.927 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-30 22:25:14.781 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.BlogMapper.getTop.debug:159 -==>  Preparing: select blog_id, blog_title, blog_goods, blog_read, blog_collection, blog_comment, created_time,type_name from bl_blog as b where b.recommend = 1 and b.deleted = 0 
+2020-06-30 22:25:14.783 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.BlogMapper.getTop.debug:159 -==> Parameters: 
+2020-06-30 22:25:14.977 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-30 22:25:14.980 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /blog/getTop(String), [](String), 0(Integer), org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'type_name' in 'field list'
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'type_name' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'type_name' in 'field list'
+	at com.dodannie.blog.service.impl.BlogServiceImpl.getTop(BlogServiceImpl.java:125)
+	at com.dodannie.blog.service.impl.BlogServiceImpl$$FastClassBySpringCGLIB$$e258d22d.invoke(<generated>)
+	at com.dodannie.blog.service.impl.BlogServiceImpl$$EnhancerBySpringCGLIB$$bcaa9480.getTop(<generated>)
+	at com.dodannie.blog.service.impl.BlogServiceImpl$$FastClassBySpringCGLIB$$e258d22d.invoke(<generated>)
+	at com.dodannie.blog.service.impl.BlogServiceImpl$$EnhancerBySpringCGLIB$$2ff71ddc.getTop(<generated>)
+	at com.dodannie.blog.controller.BlogController.getTop(BlogController.java:169)
+	at com.dodannie.blog.controller.BlogController$$FastClassBySpringCGLIB$$fa64fce1.invoke(<generated>)
+	at com.dodannie.blog.aspect.RequestAspect.doAround(RequestAspect.java:58)
+	at com.dodannie.blog.controller.BlogController$$EnhancerBySpringCGLIB$$59058f18.getTop(<generated>)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'type_name' in 'field list'
+(String), GET(String), 0(Long), null, 0:0:0:0:0:0:0:1(String)
+2020-06-30 22:25:15.015 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-30 22:31:02.415 DEBUG [main]com.dodannie.blog.BlogApplication.logStarting:53 -Running with Spring Boot v2.1.14.RELEASE, Spring v5.1.15.RELEASE
+2020-06-30 22:31:20.372 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -==>  Preparing: select name, header, signature, username, password from bl_admin where username = ? 
+2020-06-30 22:31:20.430 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -==> Parameters: admin(String)
+2020-06-30 22:31:20.493 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.AdminMapper.getByUsername.debug:159 -<==      Total: 1
+2020-06-30 22:31:21.586 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-30 22:31:21.596 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /admin/login(String), [Admin(id=null, name=null, header=null, signature=null, comment=null, username=admin, password=e10adc3949ba59abbe56e057f20f883e)](String), 1(Integer), null, POST(String), 1145(Long), {"code":20000,"data":{"token":"9EE2B8D8E73F55848F0380F80E854650"},"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-30 22:31:21.630 DEBUG [http-nio-1000-exec-2]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-30 22:31:27.617 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.BlogMapper.recomRead.debug:159 -==>  Preparing: select blog_id, blog_title, blog_goods, blog_read, blog_collection, blog_comment, created_time,type_name from bl_blog as b inner join bl_type as t on type_id = blog_type where t.deleted = 0 and b.deleted = 0 order by (blog_read + blog_goods) desc limit 5 
+2020-06-30 22:31:27.620 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.BlogMapper.recomRead.debug:159 -==> Parameters: 
+2020-06-30 22:31:27.643 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.BlogMapper.recomRead.debug:159 -<==      Total: 3
+2020-06-30 22:31:27.705 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-30 22:31:27.708 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /blog/recomRead(String), [](String), 1(Integer), null, GET(String), 97(Long), {"code":20000,"data":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1277960008499290112","blogRead":6,"blogTitle":"JavaScript在浏览器中的事件循环机制","createdTime":"2020-06-30 21:39:44","typeName":"Javascript"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1277133222783172608","blogRead":1,"blogTitle":"测试博客1","createdTime":"2020-06-28 14:54:24","typeName":"Javascript"},{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1277133260989087744","blogRead":0,"blogTitle":"测试博客2","createdTime":"2020-06-28 14:54:33","typeName":"Go"}],"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-30 22:31:27.740 DEBUG [http-nio-1000-exec-3]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-30 22:31:39.618 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.BlogMapper.getTop.debug:159 -==>  Preparing: select blog_id, blog_title, blog_goods, blog_read, blog_collection, blog_comment, created_time from bl_blog as b where b.recommend = 1 and b.deleted = 0 
+2020-06-30 22:31:39.619 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.BlogMapper.getTop.debug:159 -==> Parameters: 
+2020-06-30 22:31:39.635 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.BlogMapper.getTop.debug:159 -<==      Total: 0
+2020-06-30 22:31:39.655 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-30 22:31:39.657 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /blog/getTop(String), [](String), 1(Integer), null, GET(String), 64(Long), {"code":20000,"data":[],"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-30 22:31:39.689 DEBUG [http-nio-1000-exec-4]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
+2020-06-30 22:33:17.138 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.BlogMapper.getTop.debug:159 -==>  Preparing: select blog_id, blog_title, blog_goods, blog_read, blog_collection, blog_comment, created_time from bl_blog as b where b.recommend = 1 and b.deleted = 0 
+2020-06-30 22:33:17.140 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.BlogMapper.getTop.debug:159 -==> Parameters: 
+2020-06-30 22:33:17.157 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.BlogMapper.getTop.debug:159 -<==      Total: 1
+2020-06-30 22:33:17.184 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==>  Preparing: insert into bl_log( log_url, log_params, log_status, log_message, log_method, log_time, log_result, log_ip ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-30 22:33:17.185 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -==> Parameters: /blog/getTop(String), [](String), 1(Integer), null, GET(String), 55(Long), {"code":20000,"data":[{"blogCollection":0,"blogComment":0,"blogGoods":0,"blogId":"1277960008499290112","blogRead":6,"blogTitle":"JavaScript在浏览器中的事件循环机制","createdTime":"2020-06-30 21:39:44"}],"msg":"操作成功"}(String), 0:0:0:0:0:0:0:1(String)
+2020-06-30 22:33:17.350 DEBUG [http-nio-1000-exec-7]com.dodannie.blog.mapper.LogMapper.save.debug:159 -<==    Updates: 1
