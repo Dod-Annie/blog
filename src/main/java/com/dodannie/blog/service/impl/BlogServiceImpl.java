@@ -121,6 +121,11 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public List<BlogVo> getTop() {
+        return blogMapper.getTop();
+    }
+
+    @Override
     public List<BlogVo> getTimeLine() {
         return blogMapper.getTimeLine();
     }

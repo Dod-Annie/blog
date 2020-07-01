@@ -50,6 +50,7 @@ public class ShiroConfig {
         filterMap.put("/music/getList", "anon");
         filterMap.put("/type/getList", "anon");
         filterMap.put("/blog/recomRead", "anon");
+        filterMap.put("/blog/getTop", "anon");
         filterMap.put("/blog/getByPage", "anon");
         filterMap.put("/blog/read/**", "anon");
         filterMap.put("/blog/getTimeLine", "anon");

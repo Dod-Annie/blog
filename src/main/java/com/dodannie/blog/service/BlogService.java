@@ -65,6 +65,12 @@ public interface BlogService {
     List<BlogVo> recomRead();
 
     /**
+     * 推荐阅读
+     * @return
+     */
+    List<BlogVo> getTop();
+
+    /**
      * 查询时间轴
      * @return
      */

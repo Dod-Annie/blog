@@ -65,6 +65,12 @@ public interface BlogMapper {
     List<BlogVo> recomRead();
 
     /**
+     * 查询置顶封面
+     * @return
+     */
+    List<BlogVo> getTop();
+
+    /**
      * 查询时间轴
      * @return
      */
