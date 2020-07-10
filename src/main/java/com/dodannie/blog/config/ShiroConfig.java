@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
 import javax.servlet.Filter;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -43,7 +44,7 @@ public class ShiroConfig {
          *  perms：该资源必须得到权限才可以访问
          *  role：该资源必须得到角色权限才可以访问
          */
-        Map<String, String> filterMap = Maps.newHashMap();
+        LinkedHashMap<String, String> filterMap = Maps.newLinkedHashMap();
         filterMap.put("/*/login", "anon");
         filterMap.put("/*/register", "anon");
         filterMap.put("/link/list", "anon");
@@ -56,6 +57,9 @@ public class ShiroConfig {
         filterMap.put("/blog/getTimeLine", "anon");
         filterMap.put("/about/read", "anon");
         filterMap.put("/admin/getAdmin", "anon");
+        filterMap.put("/blog/read", "anon");
+        filterMap.put("/blog/getGood/*", "anon");
+        filterMap.put("/blog/getCollection/*", "anon");
         filterMap.put("/comment/getByBlog/**", "anon");
         filterMap.put("/**", "authc");
 

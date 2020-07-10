@@ -4,6 +4,7 @@ import com.dodannie.blog.enums.ResultEnum;
 import com.dodannie.blog.exception.BlogException;
 import com.dodannie.blog.utils.ShiroUtils;
 import com.dodannie.blog.utils.StringUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.buf.MessageBytes;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -20,6 +21,7 @@ import java.util.Map;
  * @Date: 2020/2/9 15:53
  * @Version 1.0
  */
+@Slf4j
 public class LoginInterceptor implements HandlerInterceptor {
 
     /**
@@ -39,7 +41,9 @@ public class LoginInterceptor implements HandlerInterceptor {
             "/blog/getTimeLine",
             "/blog/getByPage",
             "/comment/getByBlog",
-            "/admin/getAdmin"
+            "/admin/getAdmin",
+            "/blog/getGood",
+            "/blog/getCollection",
     };
 
     @Override
@@ -65,6 +69,8 @@ public class LoginInterceptor implements HandlerInterceptor {
                 return true;
             }
         }
+
+        log.info("请求拦截========================");
         throw new BlogException(ResultEnum.NOT_LOGIN);
     }
 

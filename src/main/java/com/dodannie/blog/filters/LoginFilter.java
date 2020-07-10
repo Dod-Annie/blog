@@ -3,6 +3,7 @@ package com.dodannie.blog.filters;
 import com.alibaba.fastjson.JSONObject;
 import com.dodannie.blog.enums.ResultEnum;
 import com.dodannie.blog.utils.Result;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.web.filter.authc.UserFilter;
 
 import javax.servlet.ServletRequest;
@@ -14,18 +15,21 @@ import java.io.IOException;
  * @Date: 2020/2/16 16:49
  * @Version 1.0
  */
+@Slf4j
 public class LoginFilter extends UserFilter {
 
     /**
      * 这个方法用于处理未登录时页面重定向的逻辑
      * 因此，只要进入了这个方法，就意味着登录失效了
      * 我们只需要在这个方法里，给前端返回一个登录失效的状态码即可
+     *
      * @param request
      * @param response
      * @throws IOException
      */
     @Override
     protected void redirectToLogin(ServletRequest request, ServletResponse response) throws IOException {
+        log.info("SHIRO拦截========================");
         response.setContentType("application/json; charset=utf-8");
         response.getWriter().write(JSONObject.toJSONString(new Result<>(ResultEnum.NOT_LOGIN)));
     }

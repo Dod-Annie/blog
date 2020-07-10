@@ -164,6 +164,7 @@
         created_time,
         date_format(created_time, '%Y-%m') as blog_month
         from bl_blog
+        where deleted = 0
         order by created_time desc
     </select>
 
